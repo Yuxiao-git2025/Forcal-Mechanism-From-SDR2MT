@@ -1,0 +1,7 @@
+In GCMT coordinates: [Mrr,Mtt,Mpp,Mrt,Mrp,Mtp]
+In NED  coordinates: [Mxx,Myy,Mzz,Mxy,Mxz,Myz]
+(The elements of the seismic moment tensor are generally in units of N*m)
+
+The conversion relationship between the two is:
+        Mxx=Mtt,Myy=Mpp,Mzz=Mrr,Mxy=-Mtp,Mxz=Mrp,Myz=Mrt
+
