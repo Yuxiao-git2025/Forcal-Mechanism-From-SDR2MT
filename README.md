@@ -1,4 +1,4 @@
-# Forcal-Mechanism-From-SDR2MT
+# Focal-Mechanism-From-SDR2MT
 Continued the calculation and `decomposition of moment tensors` based on the previous repository <br>
 -----
 Vavryčuk (2015) discusses the decomposition of a general seismic moment tensor into three elementary components: the isotropic component (ISO), the double-couple component (DC), and the compensated linear vector dipole component (CLVD). This decomposition is mainly used to classify seismic source types and to provide a physical interpretation of non-double-couple mechanisms.
