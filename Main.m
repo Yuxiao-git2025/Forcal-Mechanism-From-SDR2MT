@@ -58,3 +58,25 @@ set(gcf,'Position',[400,85,900,600]);
 %% Plot Diamond
 MEC_PlotDiamond(ResultMT2.clvd,ResultMT2.iso);
 
+
+
+% =========================================================================
+%                            -- Part III --
+% =========================================================================
+%% Identification (EXPL, CLAP, EQs)
+% Columns are:
+% [MNN, MEE, MUU, MEU, MNU, MNE] or [M11, M22, M33, M23, M13, M12]
+% *The first six events are North Korean nuclear tests (2006–2017),
+% *The seventh is a cavity collapse following the 2017 test,
+% *The last two are South Korean earthquakes (2016 and 2017)
+load('Data/MT_Test.mat');
+IDResult=MEC_MTIdentify(MT_Test,'ned');
+
+%% Plots
+ResultMT3=MEC_MTDecomposition(MT_Test,'ned');
+figure; tiledlayout(3,3,"TileSpacing","compact","Padding","compact");
+for i=1:size(MT_Test,1)
+    ax=nexttile;
+    MEC_PlotBall2D(ResultMT3.strike2(i),ResultMT3.dip2(i),ResultMT3.rake2(i),'full',600,ax);
+    title([IDResult.LikeEvent{i}]);
+end
